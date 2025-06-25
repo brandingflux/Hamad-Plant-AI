@@ -1,15 +1,15 @@
 ![Cover Image](media/cover.png)
 
-# Greenathon-Plant-AI🌱 [![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2FRishit-dagli%2FGreenathon-Plant-AI)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FRishit-dagli%2FGreenathon-Plant-AI)
+# Hamad Verdleaf AI🌱 [![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2FAdministrator%2FHamad-Plant-AI)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FAdministrator%2FHamad-Plant-AI)
 
 [![Launch Web App](https://img.shields.io/badge/launch-web--app-informational?style=flat&logo=google-chrome)](https://www.plant-ai.tech/)
 [![Models TF Hub](https://img.shields.io/badge/Models-TF%20Hub-orange?style=flat&logo=tensorflow)](https://tfhub.dev/rishit-dagli/plant-disease/)
-[![Azure Static Web Apps CI/CD](https://github.com/Rishit-dagli/Greenathon-Plant-AI/actions/workflows/azure-static-web-apps-mango-forest-0c00d3400.yml/badge.svg)](https://github.com/Rishit-dagli/Greenathon-Plant-AI/actions/workflows/azure-static-web-apps-mango-forest-0c00d3400.yml)
-[![Lint Code Base](https://github.com/Rishit-dagli/Greenathon-Plant-AI/actions/workflows/linter.yml/badge.svg)](https://github.com/Rishit-dagli/Greenathon-Plant-AI/actions/workflows/linter.yml)
+[![Azure Static Web Apps CI/CD](https://github.com/Administrator/Hamad-Plant-AI/actions/workflows/azure-static-web-apps-mango-forest-0c00d3400.yml/badge.svg)](https://github.com/Administrator/Hamad-Plant-AI/actions/workflows/azure-static-web-apps-mango-forest-0c00d3400.yml)
+[![Lint Code Base](https://github.com/Administrator/Hamad-Plant-AI/actions/workflows/linter.yml/badge.svg)](https://github.com/Administrator/Hamad-Plant-AI/actions/workflows/linter.yml)
 
 [![GitHub license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/Rishit-dagli/Greenathon-Plant-AI?style=social)](https://github.com/Rishit-dagli/Greenathon-Plant-AI/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/Rishit-dagli/Greenathon-Plant-AI?style=social)](https://github.com/Rishit-dagli/Greenathon-Plant-AI/network/members)
+[![GitHub stars](https://img.shields.io/github/stars/Administrator/Hamad-Plant-AI?style=social)](https://github.com/Administrator/Hamad-Plant-AI/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Administrator/Hamad-Plant-AI?style=social)](https://github.com/Administrator/Hamad-Plant-AI/network/members)
 
 This is a web application🌐 which could help easily diagnose diseases in plants
 🌱 using Machine Learning all on the web, powered by TensorFlow JS. 
@@ -28,15 +28,12 @@ This is a web application🌐 which could help easily diagnose diseases in plant
 
 ## UI Design 🎨
 
-Click to View Plant AI web app Design from below
-
-[![Plant AI Design](https://img.shields.io/badge/PlantAI-FIGMA-black.svg?style=for-the-badge&logo=figma)](https://www.figma.com/file/RbfBDLPgNNTtLp5xmvJEEH/Plant-AI-Hackathon-Website)
 
 ## About the Notebooks
 
 ### [`plant-diseases-training.ipynb`](notebooks/plant-diseases-training.ipynb)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rishit-dagli/Greenathon-Plant-AI/blob/main/notebooks/plant-diseases-training.ipynb)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Rishit-dagli/Greenathon-Plant-AI/HEAD?filepath=notebooks%2Fplant-diseases-training.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Administrator/Hamad-Plant-AI/blob/main/notebooks/plant-diseases-training.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Administrator/Hamad-Plant-AI/HEAD?filepath=notebooks%2Fplant-diseases-training.ipynb)
 
 This notebook contains the code to train a model on the [PlantVillage dataset](http://arxiv.org/abs/1511.08060)
 to identify diseases from plant images. Here we provide a subset of our 
@@ -44,15 +41,15 @@ experiments on working with this data. Finally we export our model as a
 TensorFlow `SavedModel`.
 
 ### [`plant_diseases_TFJS.ipynb`](notebooks/plant_diseases_TFJS.ipynb)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rishit-dagli/Greenathon-Plant-AI/blob/main/notebooks/plant_diseases_TFJS.ipynb)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Rishit-dagli/Greenathon-Plant-AI/HEAD?filepath=notebooks%2Fplant_diseases_TFJS.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Administrator/Hamad-Plant-AI/blob/main/notebooks/plant_diseases_TFJS.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Administrator/Hamad-Plant-AI/HEAD?filepath=notebooks%2Fplant_diseases_TFJS.ipynb)
 
 This notebook shows the the process of converting the TensorFlow `SavedModel` we built in the prequel notebook to the TFJS format for the Plant AI model. It 
 also shows performing optimizations on this.
 
 ### [`plant_diseases_TFLite.ipynb`](notebooks/plant_disease_TFLite.ipynb)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rishit-dagli/Greenathon-Plant-AI/blob/main/notebooks/plant_disease_TFLite.ipynb)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Rishit-dagli/Greenathon-Plant-AI/HEAD?filepath=notebooks%2Fplant_diseases_TFLite.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Administrator/Hamad-Plant-AI/blob/main/notebooks/plant_disease_TFLite.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Administrator/Hamad-Plant-AI/HEAD?filepath=notebooks%2Fplant_diseases_TFLite.ipynb)
 
 This notebook shows the the process of converting the TensorFlow `SavedModel` we built in the prequel notebook to the TF Lite format for the Plant AI model.
 
@@ -63,8 +60,8 @@ you have [Node.js](http://nodejs.org/) installed. This runs the app in
 development mode:
 
 ```sh
-git clone https://github.com/Rishit-dagli/Greenathon-Plant-AI # or clone your own fork
-cd Greenathon-Plant-AI
+git clone https://github.com/brandingflux/Hamad-Plant-AI # or clone your own fork
+cd Hamad-Plant-AI
 npm install
 npm start
 ```
@@ -84,11 +81,11 @@ Following Linters are used internally by super linter (enabled for this project)
 
 ## Want to Contribute 🙋‍♂️?
 
-Awesome! If you want to contribute to this project, you're always welcome! See [Contributing Guidelines](CONTRIBUTING.md). You can also take a look at [Greenathon-Plant-AI's Project Status Tracker](https://github.com/Rishit-dagli/Greenathon-Plant-AI/projects/1) for getting more information about current or upcoming tasks.
+Awesome! If you want to contribute to this project, you're always welcome! See [Contributing Guidelines](CONTRIBUTING.md). You can also take a look at [Hamad Verdleaf AI's Project Status Tracker](https://github.com/Administrator/Hamad-Plant-AI/projects/1) for getting more information about current or upcoming tasks.
 
 ## Want to discuss? 💬
 
-Have any questions, doubts or want to present your opinions, views? You're always welcome. You can [start discussions](https://github.com/Rishit-dagli/Greenathon-Plant-AI/discussions).
+Have any questions, doubts or want to present your opinions, views? You're always welcome. You can [start discussions](https://github.com/Administrator/Hamad-Plant-AI/discussions).
 
 ## Contributors
 
@@ -112,7 +109,7 @@ Have any questions, doubts or want to present your opinions, views? You're alway
 ## License
 
 ```
-Copyright 2020 Rishit Dagli
+Copyright 2020 Muhammad Umar
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
