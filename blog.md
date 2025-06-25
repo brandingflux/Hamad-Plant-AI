@@ -1,15 +1,15 @@
 ---
 permalink: blog
-title: Plant AI Blog
+title: VerdLeaf AIBlog
 ---
 
 # Project Plant AI
 
 ![Cover image](media/cover.png)
 
-Hello developers 👋! In this article, we introduce our project “Plant AI ☘️” and walk you through our motivation behind building this project, how it could be helpful to the community, the process of building this project, and finally our future plans with this project.
+Hello developers 👋! In this article, we introduce our project “VerdLeaf AI☘️” and walk you through our motivation behind building this project, how it could be helpful to the community, the process of building this project, and finally our future plans with this project.
 
-Plant AI ☘️ is a web application 🌐 that helps one to easily diagnose diseases in plants from plant images, using Machine Learning possible all on the web. We provide an interface on the website where you can simply upload images of your plant leaves since we majorly focus on plant leaf diseases and instantly know diseases the plant has. We further also provide users easy ways to solve the diagnosed disease.
+VerdLeaf AI☘️ is a web application 🌐 that helps one to easily diagnose diseases in plants from plant images, using Machine Learning possible all on the web. We provide an interface on the website where you can simply upload images of your plant leaves since we majorly focus on plant leaf diseases and instantly know diseases the plant has. We further also provide users easy ways to solve the diagnosed disease.
 
 <!-- markdown-link-check-disable-next-line -->
 > As of now our model supports 38 categories of healthy and unhealthy plant images across species and diseases. The complete list of supported diseases and species can be found [here](https://coverimages.blob.core.windows.net/plantai-tfjs-model/labels.txt). In case you are looking for an image to test this out, find one testing image [here](https://drive.google.com/drive/folders/13gjzw--osiXXZdIrhtyzB6WvCtHY36Wj?usp=sharing)
@@ -107,13 +107,13 @@ To further make our model even more accessible and usable to others in the commu
 
 ## Designing the web app
 
-One of our major aims while building Plant AI was to make high-quality disease detection accessible to most crop growers. To do so we had to design the web app in a manner that it was easy enough to use this project on a daily basis and also be accessible to all. Thus, we decided to build Plant AI in the form of a web app to make it easily accessible and usable by crop growers.
+One of our major aims while building VerdLeaf AIwas to make high-quality disease detection accessible to most crop growers. To do so we had to design the web app in a manner that it was easy enough to use this project on a daily basis and also be accessible to all. Thus, we decided to build VerdLeaf AIin the form of a web app to make it easily accessible and usable by crop growers.
 
-As mentioned earlier, the design and UX of our project is focused on ease of use and simplicity. The basic frontend of Plant AI contains just a minimal landing page and two other subpages. All pages were designed using custom reusable components, improving the overall performance of the web app and helping keep the design consistent across the web app.
+As mentioned earlier, the design and UX of our project is focused on ease of use and simplicity. The basic frontend of VerdLeaf AIcontains just a minimal landing page and two other subpages. All pages were designed using custom reusable components, improving the overall performance of the web app and helping keep the design consistent across the web app.
 
 While designing Plant AI, we aimed at the above mentioned best practices so the first thing we did is to get a UI/UX wireframe.
 
-[![Plant AI Design](https://img.shields.io/badge/PlantAI-FIGMA-black.svg?style=for-the-badge&logo=figma)](https://www.figma.com/file/RbfBDLPgNNTtLp5xmvJEEH/Plant-AI-Hackathon-Website)
+[![VerdLeaf AIDesign](https://img.shields.io/badge/PlantAI-FIGMA-black.svg?style=for-the-badge&logo=figma)](https://www.figma.com/file/RbfBDLPgNNTtLp5xmvJEEH/Plant-AI-Hackathon-Website)
 
 ## Building and hosting the web app
 
