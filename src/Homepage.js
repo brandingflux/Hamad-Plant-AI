@@ -14,28 +14,66 @@ class Homepage extends Component {
     showPrediction: false,
     image: null,
     tfModel: null,
-    labels: null
+    labels: null,
+    modelError: null,
+    isLoading: true
   }
 
   async componentDidMount() {
+    try {
+      console.log('Loading labels...');
+      const labelsResponse = await fetch('/models/plant_disease_tfjs/class_indices.json');
+      if (!labelsResponse.ok) {
+        throw new Error(`Failed to load labels (${labelsResponse.status}): ${labelsResponse.statusText}`);
+      }
+      const labelsText = await labelsResponse.text();
+      console.log('Labels text:', labelsText.substring(0, 100) + '...'); // Log first 100 chars
+      
+      let labels;
+      try {
+        labels = JSON.parse(labelsText);
+      } catch (e) {
+        console.error('Failed to parse labels JSON:', e);
+        throw new Error('Failed to parse labels file as JSON. See console for details.');
+      }
+      console.log('Labels loaded successfully:', Object.keys(labels).length, 'classes');
 
-    let response = await fetch('https://coverimages.blob.core.windows.net/plantai-tfjs-model/class_indices.json');
-    let labels = await response.json();
-    labels = JSON.stringify(labels);
-    labels = JSON.parse(labels);
+      console.log('Loading TensorFlow model...');
+      const modelPath = '/models/plant_disease_tfjs/model.json';
+      console.log('Model path:', modelPath);
+      
+      let tfModel;
+      try {
+        tfModel = await tf.loadLayersModel(modelPath);
+        console.log('TensorFlow model loaded successfully');
+      } catch (e) {
+        console.error('Failed to load TensorFlow model:', e);
+        throw new Error('Failed to load TensorFlow model. See console for details.');
+      }
 
-    let tfModel = await tf.loadLayersModel('https://coverimages.blob.core.windows.net/plantai-tfjs-model/model.json');
-
-    this.setState({
-      labels,
-      tfModel
-    })
+      this.setState({
+        labels,
+        tfModel,
+        isLoading: false
+      });
+    } catch (error) {
+      console.error('Error in componentDidMount:', error);
+      this.setState({
+        modelError: error.message,
+        isLoading: false
+      });
+    }
   }
 
   tryNowClickHandler = () => {
+    console.log('Try Now clicked');
+    if (this.state.modelError) {
+      alert('Error loading model. Please try refreshing the page.');
+      return;
+    }
     this.setState({
       showTryNow: true
-    })
+    });
   }
 
   tryNowCloseHandler = () => {
@@ -106,12 +144,15 @@ class Homepage extends Component {
       const predictedDisease = this.state.labels[class_idx];
       let [name, disease] = predictedDisease.split('___');
       name = name.replaceAll('_', ' ');
-      disease = disease.replaceAll('_', ' ');
+      disease = disease ? disease.replaceAll('_', ' ') : 'Healthy';
       diseases.push({
         name,
         disease,
-        image: `https://coverimages.blob.core.windows.net/disease-cover-images/${predictedDisease}.JPG`,
-        cureURL: encodeURI(`https://www.google.com/search?q=How to cure ${disease} in ${name}`)
+        // Use a default image since the Azure blob storage is not accessible
+        image: '/models/plant_disease_tfjs/sample.jpg',
+        cureURL: disease === 'Healthy' ? 
+          encodeURI(`https://www.google.com/search?q=How to keep ${name} plants healthy`) :
+          encodeURI(`https://www.google.com/search?q=How to cure ${disease} in ${name}`)
       })
     }
 
@@ -138,7 +179,11 @@ class Homepage extends Component {
 
     return (
       <>
-        <Header onTryNowClick={this.tryNowClickHandler} />
+        <Header 
+          onTryNowClick={this.tryNowClickHandler}
+          modelError={this.state.modelError}
+          isLoading={this.state.isLoading}
+        />
         <Instructions id="instructions" />
         <Blog id="blog" />
         <Footer />

@@ -15,6 +15,7 @@ import {
   faSkull,
   faFirstAid,
   faPlusSquare,
+  faBars
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -31,7 +32,8 @@ library.add(
   faBolt,
   faSkull,
   faFirstAid,
-  faPlusSquare
+  faPlusSquare,
+  faBars
 );
 
 const App = () => {

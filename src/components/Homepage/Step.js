@@ -1,13 +1,15 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Step = ({ stepNum, icon, stepTitle, stepDes }) => {
+const Step = ({ icon, stepNumber, title, description }) => {
   return (
     <div className="step">
-      <FontAwesomeIcon icon={`${icon}`} className="icon" />
-      <div className="stepnum">{stepNum}</div>
-      <h4 className="steptitle">{stepTitle}</h4>
-      <p className="stepdes">{stepDes}</p>
+      <div className="step-header">
+        <div className="stepnum">{stepNumber}</div>
+        <FontAwesomeIcon icon={icon} className="icon" />
+      </div>
+      <h3 className="steptitle">{title}</h3>
+      <p className="stepdes">{description}</p>
     </div>
   );
 };

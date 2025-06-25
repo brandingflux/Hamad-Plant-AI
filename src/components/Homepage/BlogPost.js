@@ -2,13 +2,14 @@ import React from "react";
 
 const BlogPost = ({ imgLink, blogTitle, blogBody }) => {
   return (
-    <div className="blogpost">
-      <div className="blog-img">
-        <img src={`${imgLink}`} alt={blogTitle} />
+    <div className="blogpost glass-card">
+      <div className="blog-img blog-img-glass">
+        <img src={`${imgLink}`} alt={blogTitle} className="blog-img-main" />
+        <div className="blog-img-overlay"></div>
       </div>
       <div className="blog-text">
-        <h3 class="blog-title">{blogTitle}</h3>
-        <p class="blog-body">{blogBody}</p>
+        <h3 className="blog-title">{blogTitle}</h3>
+        <p className="blog-body">{blogBody}</p>
       </div>
     </div>
   );
