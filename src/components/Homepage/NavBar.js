@@ -13,8 +13,20 @@ const NavBar = ({onTryNowClick}) => {
       if (window.innerWidth > 600) setMenuOpen(false);
     };
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+
+    // Close menu on scroll (mobile only)
+    const handleScroll = () => {
+      if (window.innerWidth <= 600 && menuOpen) {
+        setMenuOpen(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [menuOpen]);
 
   // Close menu on nav click (mobile)
   const handleNavClick = (cb) => {
