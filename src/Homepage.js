@@ -22,18 +22,27 @@ class Homepage extends Component {
   async componentDidMount() {
     try {
       console.log('Loading labels...');
-      const labelsResponse = await fetch('/models/plant_disease_tfjs/class_indices.json');
+      const labelsUrl = '/models/plant_disease_tfjs/class_indices.json';
+      console.log('Labels URL:', labelsUrl);
+      
+      const labelsResponse = await fetch(labelsUrl);
+      console.log('Labels response status:', labelsResponse.status);
+      console.log('Labels response headers:', Object.fromEntries(labelsResponse.headers.entries()));
+      
       if (!labelsResponse.ok) {
         throw new Error(`Failed to load labels (${labelsResponse.status}): ${labelsResponse.statusText}`);
       }
+      
       const labelsText = await labelsResponse.text();
-      console.log('Labels text:', labelsText.substring(0, 100) + '...'); // Log first 100 chars
+      console.log('Labels text length:', labelsText.length);
+      console.log('Labels text preview:', labelsText.substring(0, 200) + '...'); // Log first 200 chars
       
       let labels;
       try {
         labels = JSON.parse(labelsText);
       } catch (e) {
         console.error('Failed to parse labels JSON:', e);
+        console.error('Full labels text:', labelsText);
         throw new Error('Failed to parse labels file as JSON. See console for details.');
       }
       console.log('Labels loaded successfully:', Object.keys(labels).length, 'classes');
