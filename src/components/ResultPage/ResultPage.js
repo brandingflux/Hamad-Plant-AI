@@ -30,7 +30,7 @@ const ResultPage = ({ image, getDiseases, onTryAnotherClick, onClose }) => {
         <>
           <IssueContainer diseases={diseases} />
           <CTA icon="cloud-upload-alt" text="Test Another" onClick={onTryAnotherClick} />
-          <a href="https://forms.gle/bCNf3rMeKg71U95U9" className="cta feedback-cta">
+          <a href="https://forms.gle/p6ufPXnCQENxrSbX7" className="cta feedback-cta">
             <FontAwesomeIcon icon="comments" />
             <p>Submit Feedback</p>
           </a>
